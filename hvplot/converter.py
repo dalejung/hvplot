@@ -897,7 +897,7 @@ class HoloViewsConverter:
 
             # Determine valid indexes
             if isinstance(self.data, pd.DataFrame):
-                if self.data.index.names == [None]:
+                if list(self.data.index.names) == [None]:
                     indexes = [self.data.index.name or 'index']
                 else:
                     indexes = list(self.data.index.names)
